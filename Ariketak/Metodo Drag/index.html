@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Drag1</title>
+<script type="text/javascript" src="../../lib/MooTools-Core-1.5.2.js"></script>
+<script type="text/javascript" src="../../lib/MooTools-More-1.5.2.js"></script>
+
+<script type="text/javascript">
+	window.addEvent("domready",function(){
+   		arrastre=new Drag($("caja1"));
+	});
+</script>
+
+<style type="text/css">
+#caja1 { 
+	width: 80px; 
+	height: 80px; 
+	background-color: blue; 
+	margin: 20px; 
+	position: relative
+}
+</style>
+</head>
+<body>
+	<h1>clase Drag</h1>
+	<div id="caja1">
+	
+	</div>
+</body>
+</html>

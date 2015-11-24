@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio Funciones Class</title>
+	
+	<script type="text/javascript" src="../../../lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="funciones.js"></script>
+	<style type="text/css">
+		.parrafo12{
+			font-family: Courier;
+			font-size: 12pt;
+		}
+
+		.parrafo14{  
+	    	font-size: 14pt;
+		}  
+
+		.parrafo16{  
+	    	font-size: 16pt;
+		} 
+
+		.fondoGris{
+			background-color: grey;
+		}
+
+		#ariketa1{
+			background-color: #DA3737;
+		}
+
+		#ariketa2{
+			background-color: #714EE5;
+		}
+		
+		#ariketa3{
+			background-color: #6CCEC6;
+		}
+
+		#ariketa4{
+			background-color: #8DD05B;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="ariketa1">
+		<h2>ARIKETA1</h2>
+		<p class="parrafo12" id="parrafo1">Los textos simulados son aquellos textos que, en ausencia de un texto definitivo, sirven como sustituto de futuros contenidos en la producción de maquetas para publicaciones o sitios web. También son llamados textos dummy, ficticios o de relleno. A parte de ser utilzados dentro del sector de la imprenta y del grafismo, algunos compositores de canciones también utilizan textos simulados al componer melodías, cantando estos textos antes de escribir las letras de la canción. Ya en el siglo XVI, los tipógrafos solían usar textos simulados.</p>
+
+		<button id="12">12pt</button>
+		<button id="14">14pt</button>
+		<button id="16">16pt</button>
+
+	</div>
+	<div id="ariketa2">
+		<h2>ARIKETA2</h2>			
+		<p id="parrafo2">Los textos simulados son aquellos textos que, en ausencia de un texto definitivo, sirven como sustituto de futuros contenidos en la producción de maquetas para publicaciones o sitios web. También son llamados textos dummy, ficticios o de relleno. A parte de ser utilzados dentro del sector de la imprenta y del grafismo, algunos compositores de canciones también utilizan textos simulados al componer melodías, cantando estos textos antes de escribir las letras de la canción. Ya en el siglo XVI, los tipógrafos solían usar textos simulados.</p>
+	
+	</div>
+	
+	<div id="ariketa3">
+		
+		<h2>ARIKETA3</h2>
+		<div id="coordenadas"></div><br>
+	</div>
+	
+	<div id="ariketa4">
+		<h2>ARIKETA4</h2>
+		<img id="fotos" src="../img/z.gif" alt="z" onclick="cambio(this.alt, this.src, 0)">
+		<img id="fotos" src="../img/u.gif" alt="u" onclick="cambio(this.alt, this.src, 1)">
+		<img id="fotos" src="../img/b.gif" alt="b" onclick="cambio(this.alt, this.src, 2)">
+		<img id="fotos" src="../img/i.gif" alt="i" onclick="cambio(this.alt, this.src, 3)">
+		<img id="fotos" src="../img/r.gif" alt="r" onclick="cambio(this.alt, this.src, 4)">
+		<img id="fotos" src="../img/i.gif" alt="i2" onclick="cambio(this.alt, this.src, 5)">
+
+	</div>
+</body>
+</html>

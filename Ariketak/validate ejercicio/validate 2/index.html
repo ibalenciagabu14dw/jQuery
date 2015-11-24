@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>VALIDATE1</title>
+
+	<script type="text/javascript" src="../../../lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../../lib/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="funciones.js"></script>
+
+	<style type="text/css" media="screen">
+		body{
+			text-align: center;
+		}
+		fieldset{
+			width: 40%;
+			margin: auto;
+			background-color: #F7F79B;
+		}
+	</style>
+
+</head>
+<body>
+	<fieldset>
+
+		<form id="formulario">
+			<table>
+				<tr>
+					<td>cuadro de texto(*):<input type="text" id="texto" name="texto"></td>
+				</tr>
+				<tr>
+					<td>textarea(*):<textarea id="textarea" name="textarea"></textarea></td>
+				</tr>
+				<tr>
+					<td>radio button:</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" id="radio" name="radio" value="si" checked>SI
+  						<input type="radio" id="radio" name="radio" value="no">NO
+  						<input type="radio" id="radio" name="radio" value="ns/nc">NS/NC
+  					</td>
+				</tr>
+				<tr>
+					<td>checkbox:</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" id="chkaceptado" name="chkaceptado" value="aceptado">He leido y acepto las condiciones
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						
+						<input type="checkbox" id="chkleido" name="chkleido" value="leido">He leido la politica de privacidad
+					</td>
+				</tr>
+				
+				<tr>
+					<td>select:</td>
+				</tr>
+				<tr>
+					<td>
+						<select id="select" name="select">
+  							<option value="1">1</option>
+  							<option value="2" selected>2</option>
+  							<option value="3">3</option>
+						</select>
+					</td>
+				</tr>
+				
+			</table><br><br>
+
+			<div id="respuestas"></div>
+
+			<input type="submit" value="Enviar" id="btn">
+		</form>
+		
+	</fieldset>
+	
+</body>
+</html>
