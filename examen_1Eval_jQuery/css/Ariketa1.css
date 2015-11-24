@@ -1,0 +1,19 @@
+body{
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+}
+
+img{
+	border:1px solid black;
+
+	
+}
+
+.imgAtun{
+	src: url("../imagenes/Atun.jpg");
+}
+
+.imgMejillones{
+	src: url("../imagenes/Mejillones.jpg");
+}

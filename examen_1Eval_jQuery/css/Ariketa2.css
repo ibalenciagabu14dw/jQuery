@@ -1,0 +1,11 @@
+body{
+			text-align: center;
+		}
+		fieldset{
+			width: 40%;
+			margin: auto;
+			background-color: #F7F79B;
+		}
+input.error, input select.error {
+			border: 1px solid red;
+		}  

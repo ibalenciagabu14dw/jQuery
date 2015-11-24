@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ariketa2</title>
+
+	<link href="css/Ariketa2.css" rel="stylesheet">
+	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/ariketa2.js"></script>
+
+</head>
+<body>
+	<fieldset>
+		<h1>FORMULARIO VALIDACION COMPRA</h1>
+		<form id="formulario">
+			<table>
+				<tr>
+					<td>Nombre Cliente:<input type="text" id="nombre" name="nombre"></td>
+				</tr>
+				<tr>
+					<td>
+						Tipo de pago:
+						<select id="pago" name="pago">
+  							<option value="30" selected>30</option>
+  							<option value="60">60</option>
+  							<option value="90">90</option>
+  							<option value="120">120</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DNI:<input type="text" id="dni" name="dni"></td>
+				</tr>
+
+				<tr>
+					<td>VISA:<input type="text" id="visa" name="visa"></td>
+				</tr>
+
+				<tr>
+					<td>Clave:<input type="text" id="clave" name="clave" disabled="true"><br>
+					<button value="2">2</button>
+					<button value="4">4</button>
+					<button value="0">0</button>
+					<button value="9">9</button>
+					<button value="1">1</button>
+					<button value="5">5</button>
+					<button value="7">7</button>
+					<button value="3">3</button>
+					<button value="6">6</button>
+					<button value="8">8</button>
+					</td>
+
+				</tr>
+				
+			</table><br><br>
+
+			<input type="submit" value="Grabar" id="grabar">
+
+			<div id="respuestas"></div>
+		</form>
+		
+	</fieldset>
+</body>
+</html>
