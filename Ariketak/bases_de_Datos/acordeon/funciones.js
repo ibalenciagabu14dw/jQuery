@@ -13,8 +13,8 @@ $(document).ready(function() {
 				var resp = "";
 				for (var i = 0; i < data.length; i++) {
 					resp += "<h3>"+data[i].id+" "+data[i].nombre+"</h3>";
-					resp += "<div><img src="+data[i].foto+"/></div>";
-				};
+					resp += "<div><img src="+data[i].imagen+"></div>";
+				}
 				$('#resp').html(resp);
 
 				//Si tiene clase de accordion
