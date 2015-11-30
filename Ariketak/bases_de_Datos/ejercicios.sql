@@ -6,6 +6,8 @@
 -- Tiempo de generación: 25-11-2015 a las 11:24:42
 -- Versión del servidor: 5.5.46-0ubuntu0.14.04.2
 -- Versión de PHP: 5.5.9-1ubuntu4.14
+CREATE DATABASE IF NOT EXISTS ejercicios;
+use ejercicios;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
