@@ -45,15 +45,6 @@ $(document).ready(function() {
 			resp += "</tbody>";
 			$('#tabla').html(resp);
 		}
-		})
-		.done(function() {
-			$('#tabla').tablesorter();
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
 		});
 	}//function
 });
