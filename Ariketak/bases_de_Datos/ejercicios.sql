@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2015 a las 08:50:35
+-- Tiempo de generación: 01-12-2015 a las 07:32:40
 -- Versión del servidor: 5.5.46-0ubuntu0.14.04.2
 -- Versión de PHP: 5.5.9-1ubuntu4.14
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ejercicios`
 --
+CREATE DATABASE IF NOT EXISTS `ejercicios` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `ejercicios`;
 
 -- --------------------------------------------------------
 
