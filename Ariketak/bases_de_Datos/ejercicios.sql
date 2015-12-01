@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ejercicios`
 --
-CREATE DATABASE IF NOT EXISTS `ejercicios` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `ejercicios`;
 USE `ejercicios`;
 
 -- --------------------------------------------------------

@@ -10,7 +10,7 @@ $(document).ready(function() {
 		moneda = $.cookie('divisa');
 	}
 		//llamar a la funcion para crear la tabla con los datos
-		recuperarDatos();
+		leerDatos();
 
 	//Al ejecutar el formulario darle valor a la cookie y a la moneda
 	$('#form').submit(function(event) {
@@ -20,17 +20,22 @@ $(document).ready(function() {
 			$.cookie('divisa',valor,{ expires: 10 });
 			moneda = $.cookie('divisa');
 		};
-		recuperarDatos();		
+		leerDatos();		
 	});
 
-	function recuperarDatos () {
+	function leerDatos () {
 		$.ajax({
 		url: 'datos.php',
 		type: 'post',
 		dataType: 'json',
 	
 		success: function (data) {
+			
+			//CREAMOS LA TABLA CON LOS DATOS
+			//cabecera de la tabla
 			var resp = "<thead><tr><th>Descripción</th><th>Precio</th></tr></thead><tbody>";
+			
+			//cada registro de la tabla
 			for (var i = 0;i<data.length; i++) {
 				resp += "<tr><td>";
 				resp += data[i].descripcion+"</td><td>";
@@ -43,6 +48,8 @@ $(document).ready(function() {
 				};
 			};
 			resp += "</tbody>";
+			
+			//mostramos la tabla
 			$('#tabla').html(resp);
 		}
 		});
