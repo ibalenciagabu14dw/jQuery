@@ -9,10 +9,18 @@
 	<script type="text/javascript" src="../../../lib/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="funciones.js"></script>
 	<style type="text/css">
-	table{
-		border:2px solid black;
+	
+	body{
+		text-align: center;
+	}
+	fieldset{
+		width: 70%;
 		margin: auto;
+	}
+	table{
 		width: 50%;
+		margin: auto;
+		border:2px solid black;
 	}
 	th{
 		background-color: orange;
@@ -21,16 +29,7 @@
 	td{
 		border:1px solid green;
 	}
-	body{
-		text-align: center;
-	}
-	#decimalesD,#decimalesE,#decimalesL{
-		width: 45px;
-	}
-	fieldset{
-		width: 70%;
-		margin: auto;
-	}
+	
 	</style>
 </head>
 <body>
@@ -39,9 +38,9 @@
 	</table>
 	<br/>
 	<form id="form">
-		<label for="moneda">Elija moneda: </label>
+		moneda:
 		<select id="moneda" name="moneda">
-			<option disabled="disabled" selected>Selecciona una</option>
+			<option disabled="disabled" selected>Tipo de moneda</option>
 			<option value="dolar">Dolar</option>
 			<option value="euro">Euro</option>
 			<option value="libra">Libra</option>
