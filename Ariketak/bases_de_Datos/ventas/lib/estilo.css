@@ -1,0 +1,19 @@
+body{
+		text-align: center;
+	}
+fieldset{
+	width: 70%;
+	margin: auto;
+}
+table{
+	width: 50%;
+	margin: auto;
+	border:2px solid black;
+}
+th{
+	background-color: orange;
+	color: blue;
+}
+td{
+	border:1px solid green;
+}
