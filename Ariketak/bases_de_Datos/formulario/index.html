@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="lib/estilo.css">
+
+</head>
+<body>
+	<h1>Formulario Datos</h1>
+	<label class="etqIntentos">Intentos: </label><div id="intentos"></div>
+
+	<fieldset>
+	<form id="form">
+		Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+		Apellido: <input type="text" id="apellido" name="apellido" /><br/>
+		Edad: <input type="number" id="edad" name="edad" /><br/>
+		DNI: <input type="text" id="dni" name="dni" /><br/>
+		Email: <input type="text" id="email" name="email" /><br/>
+		Provincia:  <select id="provincias" name="provincias">
+						<option selected="selected" disabled>Provincia</option>
+						<option value="gipuzkoa">Gipuzkoa</option>
+						<option value="bizkaia">Bizkaia</option>
+						<option value="araba">Araba</option>
+						<option value="nafarroa">Nafarroa</option>
+					</select><br/>
+		Fecha: <input type="date" id="fecha" name="fecha" /><br/>
+		Teléfono: <input type="text" id="telefono" name="telefono" /><br/>
+		Hora: <input type="text" id="hora" name="hora" /><br/>
+		
+		<input type="submit" id="submit" value="Enviar" />
+	</form>
+</fieldset>
+
+	<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../lib/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="funciones.js"></script>
+	
+</body>
+</html>

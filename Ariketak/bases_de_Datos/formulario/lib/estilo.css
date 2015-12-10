@@ -1,0 +1,23 @@
+body{
+	text-align: center;
+	background-color:gray;
+}
+
+.invalid{
+	background-color: red;
+	border:2px solid black;
+}
+label.invalid{
+	background-color: white;
+	border:none;
+}
+input, select{
+	margin-top: 10px;
+}
+fieldset{
+	width: 50%;
+	margin: auto;
+	border-style: dashed;
+	border-width: 5px;
+	background: linear-gradient(135deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
+}
