@@ -88,7 +88,6 @@ $(document).ready(function() {
 		invalidHandler:function (event,validator) {
 			$.cookie('intentos',++intentos);
 			$('#intentos').html($.cookie('intentos'));
-			$('#errores').html(validator.numberOfInvalids());
 		},//InvalidHandler
 		//Si la validación es correcta, sumamos 1 a los intentos y los pintamos y
 		// mandamos los datos del formulario para insertar
@@ -98,19 +97,12 @@ $(document).ready(function() {
 			if (confirm("Seguro que quieres enviar el formulario???")) {
 				var formData = $('#form').serializeArray();
 				$.ajax({
-					url: 'insertarDatos.php',
+					url: 'datos.php',
 					type: 'post',
 					dataType: 'html',
 					data: formData,
 					success:function (data) {
-						if (data == "ok") {
-							alert("Datos insertados correctamente");
-							$('input').val("");
-							$('#submit').val("Enviar");
-							$('select').val("");
-						}else{
-							alert(data);
-						}
+						
 					}//Success
 				})//Ajax
 				.fail(function() {
