@@ -14,9 +14,9 @@
 				<h2>NUEVO</h2>
 
 				<fieldset>
-				<form id="form" action="insert.php">
-					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
-					Imagen: <input type="text" id="foto" name="foto" /><br/>
+				<form id="formNuevo" >
+					Nombre: <input type="text" id="nombreNuevo" name="nombreNuevo" /><br/>
+					Imagen: <input type="text" id="imagenNuevo" name="imagenNuevo" /><br/>
 					<img src=""></img><br/>
 					<input type="submit" id="submit" value="crear" /><br>
 				</form>
@@ -26,9 +26,10 @@
 				<h2>BUSCAR</h2>
 
 				<fieldset>
-				<form id="form" action="select.php">
-					ID: <input type="text" id="nombre" name="nombre" disabled/><br/>
-					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+				<form id="formBuscar">
+					ID: <input type="text" id="idBuscar" name="idBuscar"/><br/>
+					Nombre: <input type="text" id="nombreBuscar" name="nombreBuscar" /><br/>
+					imagen: <input type="text" id="imagenBuscar" name="imagenBuscar" />
 					<img src=""></img><br/>
 					<input type="submit" id="submit" value="buscar" /><br>
 				</form>
@@ -38,11 +39,12 @@
 				<h2>MODIFICAR</h2>
 
 				<fieldset>
-				<form id="form" action="update.php">
-					ID: <input type="text" id="nombre" name="nombre" disabled/><br/>
-					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+				<form id="formModificar">
+					ID: <input type="text" id="idModificar" name="idModificar"/><br/>
+					Nombre: <input type="text" id="nombreModificar" name="nombreModificar" /><br/>
+					Imagen: <input type="text" id="imagenModificar" name="imagenModificar" /><br/>
 					<img src=""></img><br/>
-					<input type="submit" id="submit" value="buscar" /><br>
+					<input type="submit" id="submit" value="Modificar" /><br>
 				</form>
 				</fieldset>
 			</td>
@@ -50,8 +52,8 @@
 				<h2>ELIMINAR</h2>
 
 				<fieldset>
-				<form id="form" action="delete.php">
-					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+				<form id="formEliminar">
+					Nombre: <input type="text" id="nombreEliminar" name="nombreEliminar" /><br/>
 					<input type="submit" id="submit" value="eliminar" /><br>
 				</form>
 				</fieldset>
@@ -62,7 +64,6 @@
 	<!--scripts-->
 	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="lib/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="lib/jquery.cookie.js"></script>
 	<script type="text/javascript" src="lib/funciones.js"></script>
 	
 </body>
