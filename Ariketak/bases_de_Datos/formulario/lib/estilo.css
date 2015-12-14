@@ -4,12 +4,8 @@ body{
 }
 
 .invalid{
-	background-color: red;
+	background-color: #FB001E;
 	border:2px solid black;
-}
-label.invalid{
-	background-color: white;
-	border:none;
 }
 input, select{
 	margin-top: 10px;

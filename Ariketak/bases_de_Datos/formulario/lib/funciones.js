@@ -1,8 +1,9 @@
 $(document).ready(function() {
+	var intentos;
 	//Comprobar si la cookie está definida, si no lo está le damos el valor 0, si no, le damos el valor que tenía
 	//a la variable intentos
 	if ($.cookie('intentos')==undefined) {
-		intentos = 0;
+		var intentos = 0;
 		$.cookie('intentos',intentos);
 	}else{
 		intentos = $.cookie('intentos');
@@ -54,7 +55,6 @@ $(document).ready(function() {
 	jQuery.validator.addMethod("hora", function(value, element) {
 		return this.optional(element) || /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/i.test(value);
 	});
-	 
 
 	var reglas = {
 		nombre:{required:true},
@@ -78,7 +78,7 @@ $(document).ready(function() {
 		fecha:{required:" Obligatorio"},
 		telefono:{required:" Obligatorio",telefono:" Debe ser un número de teléfono"},
 		hora:{required:" Obligatorio",hora:" Debe ser una hora válida"},
-	}
+	};
 
 	$('#form').validate({
 		rules:reglas,
@@ -94,6 +94,7 @@ $(document).ready(function() {
 		submitHandler:function (form) {
 			$.cookie('intentos',++intentos);
 			$('#intentos').html($.cookie('intentos'));
+			//confirmacion del envio del formulario
 			if (confirm("Seguro que quieres enviar el formulario???")) {
 				var formData = $('#form').serializeArray();
 				$.ajax({
@@ -102,7 +103,7 @@ $(document).ready(function() {
 					dataType: 'html',
 					data: formData,
 					success:function (data) {
-						
+						alert("Datos insertados correctamente");	
 					}//Success
 				})//Ajax
 				.fail(function() {
