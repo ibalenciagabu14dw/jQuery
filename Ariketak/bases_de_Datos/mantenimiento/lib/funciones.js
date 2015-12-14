@@ -60,12 +60,10 @@ $(document).ready(function() {
 					data: formData,
 					success:function (data) {
 						alert("Realizando busqueda...");
-						for (var i = 0; i < data.length; i++) {
-							alert(data[i].id);
-							alert(data[i].nombre);
-							alert(data[i].imagen);
-						}
-						
+							alert("sdfd");
+							alert(data);
+							alert(data.nombre);
+							alert(data.imagen);
 					}//Success
 				})//Ajax
 				.fail(function() {
