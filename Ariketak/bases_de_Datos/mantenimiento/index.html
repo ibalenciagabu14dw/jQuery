@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<meta charset="UTF-8">
+	<!--estilos-->
+	<link rel="stylesheet" type="text/css" href="lib/estilo.css">
+
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<h2>NUEVO</h2>
+
+				<fieldset>
+				<form id="form" action="insert.php">
+					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+					Imagen: <input type="text" id="foto" name="foto" /><br/>
+					<img src=""></img><br/>
+					<input type="submit" id="submit" value="crear" /><br>
+				</form>
+				</fieldset>
+			</td>
+			<td>
+				<h2>BUSCAR</h2>
+
+				<fieldset>
+				<form id="form" action="select.php">
+					ID: <input type="text" id="nombre" name="nombre" disabled/><br/>
+					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+					<img src=""></img><br/>
+					<input type="submit" id="submit" value="buscar" /><br>
+				</form>
+				</fieldset>
+			</td>
+			<td>
+				<h2>MODIFICAR</h2>
+
+				<fieldset>
+				<form id="form" action="update.php">
+					ID: <input type="text" id="nombre" name="nombre" disabled/><br/>
+					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+					<img src=""></img><br/>
+					<input type="submit" id="submit" value="buscar" /><br>
+				</form>
+				</fieldset>
+			</td>
+			<td>
+				<h2>ELIMINAR</h2>
+
+				<fieldset>
+				<form id="form" action="delete.php">
+					Nombre: <input type="text" id="nombre" name="nombre" /><br/>
+					<input type="submit" id="submit" value="eliminar" /><br>
+				</form>
+				</fieldset>
+			</td>
+		</tr>
+	</table>
+	
+	<!--scripts-->
+	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="lib/funciones.js"></script>
+	
+</body>
+</html>
