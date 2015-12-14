@@ -1,9 +1,9 @@
 <?php
 	//conexion
-	$pdo = new PDO('mysql:host=localhost;dbname=ejercicios','root','');
-	//recoger parametros del formulario
-	$id = $_POST['idBuscar'];
+	include 'conexion.php';
 	
-	$stmt = $pdo->prepare("SELECT id, nombre, imagen FROM personajes WHERE id = '$id'");
-	$stmt->execute();
+	$id = $_POST['idBuscar'];
+	$stmt = $pdo->query("SELECT * FROM personajes WHERE id = '$id'");
+	$result=$stmt ->fetchAll(PDO::FETCH_ASSOC);
+	echo json_encode($result);
 ?>

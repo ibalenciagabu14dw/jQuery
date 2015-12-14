@@ -74,36 +74,20 @@ $(document).ready(function() {
 	
 	//FORMULARIO BUSCAR PERSONAJE
 	$('#formBuscar').validate({
-		rules:reglasBuscar,
-		messages:mensajesBuscar,
-		errorClass:"invalid",
-		//Si falla la validación, mostramos errores
-		invalidHandler:function (event,validator) {
-			validator.showErrors();
-				
-		},//InvalidHandler
-		//Si la validación es correcta, mandamos los datos del formulario para insertar
-		submitHandler:function (form) {
+		url: 'datos.php',
+		type: 'post',
+		dataType: 'json',
+	
+		success: function (data) {
+			var resp = "";
+			for (var i = 0;i<data.length; i++) {
+				resp += data[i].id;
+				resp += data[i].nombre;
+				resp += data[i].imagen;
+				};
 			
-			var formData = $('#formBuscar').serializeArray();
-			$.ajax({
-				url: 'select.php',
-				type: 'post',
-				dataType: 'html',
-				data: formData,
-				success:function (data) {
-					alert("Realizando busqueda...");
-					for (var i = 0;i<data.length; i++) {
-						alert("sdfd");
-						
-					}
-				}//Success
-			})//Ajax
-			.fail(function() {
-				console.log("error");
-			});//Fail
-		
-		},//SubmitHandler
+			$('#resultado').html(resp);
+		}
 	});//Validate
 	
 		//FORMULARIO MODIFICAR PERSONAJE
