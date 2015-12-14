@@ -1,18 +1,51 @@
 $(document).ready(function() {
-	
-	var reglas = {
-		nombre:{required:true}
-		
+	//Reglas de validacion
+	var reglasNuevo = {
+		nombreNuevo:{required:true},
+		imagenNuevo:{required:true}
 	};
 	//Mensajes de la validación
-	var mensajes = {
-		nombre:{required:" Obligatorio"}
-		
-	}
+	var mensajesNuevo = {
+		nombreNuevo:{required:"Obligatorio"},
+		imagenNuevo:{required:"Obligatorio"}
+	};
+	
+	//Reglas de validacion
+	var reglasBuscar = {
+		idBuscar:{required:true}
+	};
+	//Mensajes de la validación
+	var mensajesBuscar = {
+		idBuscar:{required:"Obligatorio"}
+	};
+	
+	//Reglas de validacion
+	var reglasModificar = {
+		idModificar:{required:true},
+		nombreModificar:{required:true},
+		imagenModificar:{required:true}
+	};
+	//Mensajes de la validación
+	var mensajesModificar = {
+		idModificar:{required:"Obligatorio"},
+		nombreModificar:{required:"Obligatorio"},
+		imagenModificar:{required:"Obligatorio"}
+	};
+	
+	//Reglas de validacion
+	var reglasEliminar = {
+		idEliminar:{required:true}
+	};
+	//Mensajes de la validación
+	var mensajesEliminar = {
+		idEliminar:{required:"Obligatorio"}
+	};
+	
+	
 	//FORMULARIO NUEVO PERSONAJE
 	$('#formNuevo').validate({
-		rules:reglas,
-		messages:mensajes,
+		rules:reglasNuevo,
+		messages:mensajesNuevo,
 		errorClass:"invalid",
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
@@ -41,8 +74,8 @@ $(document).ready(function() {
 	
 	//FORMULARIO BUSCAR PERSONAJE
 	$('#formBuscar').validate({
-		rules:reglas,
-		messages:mensajes,
+		rules:reglasBuscar,
+		messages:mensajesBuscar,
 		errorClass:"invalid",
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
@@ -52,31 +85,31 @@ $(document).ready(function() {
 		//Si la validación es correcta, mandamos los datos del formulario para insertar
 		submitHandler:function (form) {
 			
-				var formData = $('#formBuscar').serializeArray();
-				$.ajax({
-					url: 'select.php',
-					type: 'post',
-					dataType: 'html',
-					data: formData,
-					success:function (data) {
-						alert("Realizando busqueda...");
-							alert("sdfd");
-							alert(data);
-							alert(data.nombre);
-							alert(data.imagen);
-					}//Success
-				})//Ajax
-				.fail(function() {
-					console.log("error");
-				});//Fail
+			var formData = $('#formBuscar').serializeArray();
+			$.ajax({
+				url: 'select.php',
+				type: 'post',
+				dataType: 'html',
+				data: formData,
+				success:function (data) {
+					alert("Realizando busqueda...");
+					for (var i = 0;i<data.length; i++) {
+						alert("sdfd");
+						
+					}
+				}//Success
+			})//Ajax
+			.fail(function() {
+				console.log("error");
+			});//Fail
 		
 		},//SubmitHandler
 	});//Validate
 	
 		//FORMULARIO MODIFICAR PERSONAJE
 	$('#formModificar').validate({
-		rules:reglas,
-		messages:mensajes,
+		rules:reglasModificar,
+		messages:mensajesModificar,
 		errorClass:"invalid",
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
@@ -106,8 +139,8 @@ $(document).ready(function() {
 	
 	//FORMULARIO ELIMINAR PERSONAJE
 	$('#formEliminar').validate({
-		rules:reglas,
-		messages:mensajes,
+		rules:reglasEliminar,
+		messages:mensajesEliminar,
 		errorClass:"invalid",
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
