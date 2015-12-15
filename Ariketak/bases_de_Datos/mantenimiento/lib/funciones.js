@@ -21,15 +21,12 @@ $(document).ready(function() {
 	
 	//Reglas de validacion
 	var reglasModificar = {
-		idModificar:{required:true},
-		nombreModificar:{required:true},
-		imagenModificar:{required:true}
+		idModificar:{required:true}
+		
 	};
 	//Mensajes de la validación
 	var mensajesModificar = {
-		idModificar:{required:"Obligatorio"},
-		nombreModificar:{required:"Obligatorio"},
-		imagenModificar:{required:"Obligatorio"}
+		idModificar:{required:"Obligatorio"}
 	};
 	
 	//Reglas de validacion
@@ -50,47 +47,97 @@ $(document).ready(function() {
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
 			validator.showErrors();
-				
 		},//InvalidHandler
 		//Si la validación es correcta, mandamos los datos del formulario para insertar
 		submitHandler:function (form) {
-			
-				var formData = $('#formNuevo').serializeArray();
-				$.ajax({
-					url: 'insert.php',
-					type: 'post',
-					dataType: 'html',
-					data: formData,
-					success:function (data) {
-							alert("Datos insertados correctamente");
-					}//Success
-				})//Ajax
-				.fail(function() {
-					console.log("error");
-				});//Fail
-		
+			var formData = $('#formNuevo').serializeArray();
+			$.ajax({
+				url: 'insert.php',
+				type: 'post',
+				dataType: 'html',
+				data: formData,
+				success:function (data) {
+					alert("Datos insertados correctamente");
+				}//Success
+			})//Ajax
+			.fail(function() {
+				console.log("error");
+			});//Fail
 		},//SubmitHandler
 	});//Validate
 	
 	//FORMULARIO BUSCAR PERSONAJE
 	$('#formBuscar').validate({
-		url: 'datos.php',
-		type: 'post',
-		dataType: 'json',
-	
-		success: function (data) {
-			var resp = "";
-			for (var i = 0;i<data.length; i++) {
-				resp += data[i].id;
-				resp += data[i].nombre;
-				resp += data[i].imagen;
-				};
-			
-			$('#resultado').html(resp);
-		}
+		rules:reglasBuscar,
+		messages:mensajesBuscar,
+		errorClass:"invalid",
+		//Si falla la validación, mostramos errores
+		invalidHandler:function (event,validator) {
+			validator.showErrors();
+		},//InvalidHandler
+		//Si la validación es correcta, mandamos los datos del formulario para insertar
+		submitHandler:function (form) {
+			var formData = $('#formBuscar').serializeArray();
+			$.ajax({
+				url: 'select.php',
+				type: 'post',
+				dataType: 'json',
+				data: formData,
+				success:function (data) {
+					alert("Buscando personaje...");
+					var resp = "";
+					for (var i = 0; i < data.length; i++) {
+						$('#nombreBuscar').attr('value',data[i].nombre);
+						$('#nombreBuscar').attr('disabled','true');
+						$('#imagenBuscar').attr('src',data[i].imagen);
+					};
+				}
+			})//ajax
+			.fail(function() {
+				console.log("error");
+			});//Fail
+		},//SubmitHandler
 	});//Validate
 	
-		//FORMULARIO MODIFICAR PERSONAJE
+	
+	//FORMULARIO MODIFICAR PERSONAJE
+	$('#submitBuscar').click(function(){
+		$('#formModificar').validate({
+		rules:reglasModificar,
+		messages:mensajesModificar,
+		errorClass:"invalid",
+		//Si falla la validación, mostramos errores
+		invalidHandler:function (event,validator) {
+			validator.showErrors();
+		},//InvalidHandler
+		//Si la validación es correcta, mandamos los datos del formulario para insertar
+		submitHandler:function (form) {
+			var formData = $('#formModificar').serializeArray();
+			$.ajax({
+				url: 'select.php',
+				type: 'post',
+				dataType: 'json',
+				data: formData,
+				success:function (data) {
+					alert("Buscando personaje...");
+					var resp = "";
+					for (var i = 0; i < data.length; i++) {
+						$('#nombreModificar').attr('value',data[i].nombre);
+						$('#idModificar').attr('disabled','true');
+						$('#imagenModificar').attr('value',data[i].imagen);
+					};
+				}
+			})//ajax
+			.fail(function() {
+				console.log("error");
+			});//Fail
+		},//SubmitHandler
+	});//Validate
+});
+	
+	
+	//FORMULARIO MODIFICAR PERSONAJE
+$('#submitModificar').click(function(){
 	$('#formModificar').validate({
 		rules:reglasModificar,
 		messages:mensajesModificar,
@@ -98,11 +145,9 @@ $(document).ready(function() {
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
 			validator.showErrors();
-				
 		},//InvalidHandler
 		//Si la validación es correcta, mandamos los datos del formulario para insertar
 		submitHandler:function (form) {
-			
 				var formData = $('#formModificar').serializeArray();
 				$.ajax({
 					url: 'update.php',
@@ -119,7 +164,7 @@ $(document).ready(function() {
 		
 		},//SubmitHandler
 	});//Validate
-	
+});
 	
 	//FORMULARIO ELIMINAR PERSONAJE
 	$('#formEliminar').validate({
@@ -129,11 +174,9 @@ $(document).ready(function() {
 		//Si falla la validación, mostramos errores
 		invalidHandler:function (event,validator) {
 			validator.showErrors();
-				
 		},//InvalidHandler
 		//Si la validación es correcta, mandamos los datos del formulario para insertar
 		submitHandler:function (form) {
-			
 				var formData = $('#formEliminar').serializeArray();
 				$.ajax({
 					url: 'delete.php',
@@ -147,8 +190,6 @@ $(document).ready(function() {
 				.fail(function() {
 					console.log("error");
 				});//Fail
-		
 		},//SubmitHandler
 	});//Validate
-	
 });	//Ready

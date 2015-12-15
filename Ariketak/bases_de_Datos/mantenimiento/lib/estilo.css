@@ -18,3 +18,9 @@ fieldset{
 	border-width: 5px;
 	background: linear-gradient(135deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
 }
+
+img{
+	width:120px;
+	height:90px;
+	margin: auto;
+}
