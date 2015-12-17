@@ -4,6 +4,12 @@ body{
 	margin:auto;
 }
 
+table{
+	text-align:center;
+	margin:auto;
+	margin-top: 5%;
+}
+
 .invalid{
 	background-color: #FB001E;
 	border:2px solid black;

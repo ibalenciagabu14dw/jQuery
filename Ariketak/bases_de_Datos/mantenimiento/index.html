@@ -4,7 +4,7 @@
 	<title>Formulario</title>
 	<meta charset="UTF-8">
 	<!--estilos-->
-	<link rel="stylesheet" type="text/css" href="lib/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 </head>
 <body>
@@ -36,11 +36,11 @@
 				<h2>MODIFICAR</h2>
 				<fieldset>
 				<form id="formModificar">
-					ID: <input type="text" id="idModificar" name="idModificar"/><br/>
-					Nombre: <input type="text" id="nombreModificar" name="nombreModificar" /><br/>
-					Imagen: <input type="text" id="imagenModificar" name="imagenModificar" /><br/>
+					ID: <input type="text" id="idBuscar" name="idBuscar"/><br/>
+					Nombre: <input type="text" id="nombreModificar" name="nombreModificar" disabled/><br/>
+					Imagen: <input type="text" id="imagenModificar" name="imagenModificar" disabled/><br/>
 					<input type="submit" id="submitBuscar" value="Buscar" /><br>
-					<input type="submit" id="submitModificar" value="Modificar" hidden/><br>
+					<input type="submit" id="submitModificar" value="Modificar" hidden="true"/><br>
 					
 				</form>
 				</fieldset>
@@ -58,9 +58,13 @@
 	</table>
 	
 	<!--scripts-->
-	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="lib/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="lib/funciones.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	
+	<script type="text/javascript" src="js/nuevo.js"></script>
+	<script type="text/javascript" src="js/buscar.js"></script>
+	<script type="text/javascript" src="js/modificar.js"></script>
+	<script type="text/javascript" src="js/eliminar.js"></script>
 	
 </body>
 </html>
