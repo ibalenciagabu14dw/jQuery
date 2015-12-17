@@ -6,6 +6,6 @@
 	$nombre = $_POST['nombreModificar'];
 	$imagen = $_POST['imagenModificar'];
 	
-	$stmt = $pdo->prepare("UPDATE personajes SET nombre='$nombre' , imagen='$imagen' WHERE id='$id'");
+	$stmt = $pdo->prepare("UPDATE personajes SET nombre='$nombre', imagen='$imagen' WHERE id='$id'");
 	$stmt->execute();
 ?>
