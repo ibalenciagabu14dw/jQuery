@@ -3,7 +3,6 @@ $(document).ready(function() {
 	//Reglas de validacion
 	var reglasModificar = {
 		idModificar:{required:true}
-		
 	};
 	//Mensajes de la validación
 	var mensajesModificar = {
@@ -12,6 +11,7 @@ $(document).ready(function() {
 	
 	//FORMULARIO MODIFICAR PERSONAJE BOTON BUSCAR
 	$('#submitBuscar').click(function(){
+		alert("ok");
 		$('#formModificar').validate({
 			rules:reglasModificar,
 			messages:mensajesModificar,
@@ -24,7 +24,7 @@ $(document).ready(function() {
 			submitHandler:function (form) {
 				var formData = $('#formModificar').serializeArray();
 				$.ajax({
-					url: 'php/select.php',
+					url: 'php/selectUpdate.php',
 					type: 'post',
 					dataType: 'json',
 					data: formData,
@@ -34,10 +34,10 @@ $(document).ready(function() {
 							$('#nombreModificar').attr('value',data[i].nombre);
 							$('#imagenModificar').attr('value',data[i].imagen);
 							
-							$('#idBuscar').attr('disabled',true);
+							$('#idModificar').attr('disabled',true);
 							$('#nombreModificar').attr('disabled',false);
 							$('#imagenModificar').attr('disabled',false);
-							$('#submitBuscar').attr('hidden',true);
+							
 							$('#submitModificar').attr('hidden',false);
 						};
 					}

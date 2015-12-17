@@ -1,6 +1,6 @@
 <?php
 	//conexion
-	$pdo = new PDO('mysql:host=localhost;dbname=ejercicios','root','');
+	include 'conexion.php';
 	//recoger parametros del formulario
 	$id = $_POST['idEliminar'];
 	

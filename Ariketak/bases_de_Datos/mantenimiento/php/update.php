@@ -1,8 +1,8 @@
 <?php
 	//conexion
-	$pdo = new PDO('mysql:host=localhost;dbname=ejercicios','root','');
+	include 'conexion.php';
 	//recoger parametros del formulario
-	$id = $_POST['idbuscar'];
+	$id = $_POST['idModificar'];
 	$nombre = $_POST['nombreModificar'];
 	$imagen = $_POST['imagenModificar'];
 	
