@@ -1,6 +1,6 @@
 body{
 	text-align: center;
-	background-color:gray;
+	background-color:#af3452;
 	margin:auto;
 }
 
@@ -8,6 +8,7 @@ table{
 	text-align:center;
 	margin:auto;
 	margin-top: 5%;
+	width:90%;
 }
 
 .invalid{
@@ -18,11 +19,11 @@ input, select{
 	margin-top: 10px;
 }
 fieldset{
-	width: 50%;
+	width: 95%;
 	margin: auto;
-	border-style: dashed;
+	padding:10%;
 	border-width: 5px;
-	background: linear-gradient(135deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
+	background: linear-gradient(to bottom, rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%);
 }
 
 img{

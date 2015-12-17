@@ -4,63 +4,67 @@
 	<title>Formulario</title>
 	<meta charset="UTF-8">
 	<!--estilos-->
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
 	
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 </head>
 <body>
 	<table>
 		<tr>
 			<td>
-				<h2>NUEVO</h2>
 				<fieldset>
-				<form id="formNuevo" >
-					Nombre: <input type="text" id="nombreNuevo" name="nombreNuevo" /><br/>
-					Imagen: <input type="text" id="imagenNuevo" name="imagenNuevo" /><br/>
-					<input type="submit" id="submit" value="crear" class="btn btn-success"/><br>
-				</form>
+					<h2>NUEVO</h2>
+					<form id="formNuevo" class="scheduler-border">
+						<label for="nombreNuevo">Nombre:</label><input type="text" id="nombreNuevo" name="nombreNuevo" /><br/>
+						<label for="imagenNuevo">Imagen:</label><input type="text" id="imagenNuevo" name="imagenNuevo" /><br/>
+						
+						<input type="submit" id="submit" value="crear" class="btn btn-success"/><br>
+					</form>
 				</fieldset>
 			</td>
 			<td>
-				<h2>BUSCAR</h2>
-				<fieldset>
-				<form id="formBuscar">
-					ID: <input type="text" id="idBuscar" name="idBuscar"/><br/>
-					Nombre: <input type="text" id="nombreBuscar" name="nombreBuscar" /><br/><br/>
-					<img src="" id="imagenBuscar"></img><br/>
-					
-					<input type="submit" id="submit" value="buscar" class="btn btn-info"/><br>
-				</form>
+				
+				<fieldset class="scheduler-border">
+					<h2>BUSCAR</h2>
+					<form id="formBuscar">
+						<label for="idBuscar">ID:</label><input type="text" id="idBuscar" name="idBuscar"/><br/>
+						<label for="nombreBuscar">Nombre:</label><input type="text" id="nombreBuscar" name="nombreBuscar" /><br/><br/>
+						<img src="" id="imagenBuscar"></img><br/>
+						
+						<input type="submit" id="submit" value="buscar" class="btn btn-info"/><br>
+					</form>
 				</fieldset>
 			</td>
 			<td>
-				<h2>MODIFICAR</h2>
-				<fieldset>
-				<form id="formModificar">
-					ID: <input type="text" id="idModificar" name="idModificar"/><br/>
-					Nombre: <input type="text" id="nombreModificar" name="nombreModificar" disabled/><br/>
-					Imagen: <input type="text" id="imagenModificar" name="imagenModificar" disabled/><br/>
-					<input type="submit" id="submitBuscar" value="Buscar" class="btn btn-success"/><br>
-					<input type="submit" id="submitModificar" value="Modificar" class="btn btn-warning" disabled="disabled"/><br>
-				</form>
+				<fieldset class="scheduler-border">
+					<h2>MODIFICAR</h2>
+					<form id="formModificar">
+						<label for="idModificar">ID:</label><input type="text" id="idModificar" name="idModificar"/><br/>
+						<label for="nombreModificar">Nombre:</label><input type="text" id="nombreModificar" name="nombreModificar" disabled/><br/>
+						<label for="imagenModificar">Imagen:</label><input type="text" id="imagenModificar" name="imagenModificar" disabled/><br/>
+						
+						<input type="submit" id="submitBuscar" value="Buscar" class="btn btn-success"/><br>
+						<input type="submit" id="submitModificar" value="Modificar" class="btn btn-warning" disabled="disabled"/><br>
+					</form>
 				</fieldset>
 			</td>
 			<td>
-				<h2>ELIMINAR</h2>
-				<fieldset>
-				<form id="formEliminar">
-					ID: <input type="text" id="idEliminar" name="idEliminar" /><br/>
-					<input type="submit" id="submit" value="eliminar" class="btn btn-danger"/><br>
-				</form>
+				<fieldset class="scheduler-border">
+					<h2>ELIMINAR</h2>
+					<form id="formEliminar">
+						<label for="idEliminar">ID:</label><input type="text" id="idEliminar" name="idEliminar" /><br/>
+						
+						<input type="submit" id="submit" value="eliminar" class="btn btn-danger"/><br>
+					</form>
 				</fieldset>
 			</td>
 		</tr>
 	</table>
 	
 	<!--scripts-->
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" src="js/nuevo.js"></script>

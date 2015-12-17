@@ -9,7 +9,7 @@ $(document).ready(function() {
 		idModificar:{required:"Obligatorio"}
 	};
 	
-/*	//Reglas de validacion Modificar
+	/*Reglas de validacion Modificar
 	var reglasModificar = {
 		nombreModificar:{required:true},
 		imagenModificar:{required:true}
@@ -58,7 +58,9 @@ $(document).ready(function() {
 		});//Validate
 	});
 	
-	/*//FORMULARIO MODIFICAR PERSONAJE BOTON MODIFICAR
+	/* ******NO SE PUEDE VALIDAR UN FORMULARIO YA VALIDADO, AL ESTAR VALIDADO EN EL BOTON BUSCAR, NO PUEDO VALIDARLO OTRA VEZ EN EL BOTON MODIFICAR*****
+	
+	//FORMULARIO MODIFICAR PERSONAJE BOTON MODIFICAR
 	$('#submitModificar').click(function(){
 		$('#formModificar').validate({
 			rules:reglasModificar,
@@ -85,7 +87,9 @@ $(document).ready(function() {
 				});//Fail
 			},//SubmitHandler
 		});//Validate
-	});*/
+	});
+	
+	******************************************************************************************************************************** */
 	
 	//FORMULARIO MODIFICAR PERSONAJE BOTON MODIFICAR
 	$('#submitModificar').click(function(){
