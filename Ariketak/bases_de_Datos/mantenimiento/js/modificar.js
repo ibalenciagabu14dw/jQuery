@@ -9,7 +9,7 @@ $(document).ready(function() {
 		idModificar:{required:"Obligatorio"}
 	};
 	
-	//Reglas de validacion Modificar
+/*	//Reglas de validacion Modificar
 	var reglasModificar = {
 		nombreModificar:{required:true},
 		imagenModificar:{required:true}
@@ -18,7 +18,7 @@ $(document).ready(function() {
 	var mensajesModificar = {
 		nombreModificar:{required:"Obligatorio"},
 		imagenModificar:{required:"Obligatorio"}
-	};
+	};*/
 	
 	//FORMULARIO MODIFICAR PERSONAJE BOTON BUSCAR
 	$('#submitBuscar').click(function(){
@@ -47,7 +47,7 @@ $(document).ready(function() {
 							$('#nombreModificar').attr('disabled',false);
 							$('#imagenModificar').attr('disabled',false);
 							
-							$('#submitModificar').attr('hidden',false);
+							$('#submitModificar').prop('disabled', false);
 						};
 					}
 				})//ajax
@@ -58,7 +58,7 @@ $(document).ready(function() {
 		});//Validate
 	});
 	
-	//FORMULARIO MODIFICAR PERSONAJE BOTON MODIFICAR
+	/*//FORMULARIO MODIFICAR PERSONAJE BOTON MODIFICAR
 	$('#submitModificar').click(function(){
 		$('#formModificar').validate({
 			rules:reglasModificar,
@@ -85,6 +85,22 @@ $(document).ready(function() {
 				});//Fail
 			},//SubmitHandler
 		});//Validate
+	});*/
+	
+	//FORMULARIO MODIFICAR PERSONAJE BOTON MODIFICAR
+	$('#submitModificar').click(function(){
+		var formData = $('#formModificar').serializeArray();
+		$.ajax({
+			url: 'php/update.php',
+			type: 'post',
+			dataType: 'html',
+			data: formData,
+			success:function (data) {
+				alert("hecho");
+			}
+		})//ajax
+		.fail(function() {
+			console.log("error");
+		});//Fail
 	});
-
 });	//Ready
